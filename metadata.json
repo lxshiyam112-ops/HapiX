@@ -1,0 +1,10 @@
+{
+  "name": "Hapi Voice Chat - Group Voice Rooms",
+  "description": "Interactive Group Voice Chat & Party Rooms app with live mic seats, luxury virtual gifting, animated voice waves, AI co-host, room soundboard, mini-games, and real-time audio controls.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
