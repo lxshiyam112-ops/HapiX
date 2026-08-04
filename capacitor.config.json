@@ -1,0 +1,8 @@
+{
+  "appId": "com.hapivoice.chat",
+  "appName": "Hapi Voice Chat",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
