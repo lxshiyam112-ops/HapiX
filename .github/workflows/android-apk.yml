@@ -34,13 +34,23 @@ jobs:
 
       - name: Initialize & Sync Capacitor Android
         run: |
-          npx cap add android || true
+          set -e
+          if [ ! -f "android/gradlew" ]; then
+            echo "android/gradlew not found. Re-creating Android project..."
+            rm -rf android
+            npx cap add android
+          fi
           npx cap copy android
           npx cap sync android
 
       - name: Build Android Debug APK
         run: |
+          set -e
           cd android
+          if [ ! -f "gradlew" ]; then
+            echo "Gradle wrapper missing, re-generating..."
+            npx gradle wrapper || true
+          fi
           chmod +x gradlew
           ./gradlew assembleDebug --stacktrace
 
